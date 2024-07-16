@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Questionnaire from './components/Questionnaire';
+import Results from './components/Result';
+import logo from './components/logos/logo.png';
 
-function App() {
+const App = () => {
+  const [showResults, setShowResults] = useState(false);
+  const [answers, setAnswers] = useState([]);
+
+  const handleQuestionnaireSubmit = (submittedAnswers) => {
+    setAnswers(submittedAnswers);
+    setShowResults(true);
+  };
+
+  const handleReset = () => {
+    setAnswers([]);
+    setShowResults(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="app-header">
+        <img src={logo} alt="ARQNXS Logo" className="app-logo" />
       </header>
+      <main className="app-main">
+        {!showResults ? (
+          <Questionnaire onSubmit={handleQuestionnaireSubmit} />
+        ) : (
+          <>
+            <Results answers={answers} onReset={handleReset} />
+          </>
+        )}
+      </main>
+      <footer className="app-footer">
+        <p>&copy; 2024 Bevlogenheid Assessment App. All rights reserved.</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
