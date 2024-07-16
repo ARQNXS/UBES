@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/UBES/static/css/main.d944e44a.css",
+    "main.js": "/UBES/static/js/main.88401ce6.js",
+    "static/js/453.e4e5e4ce.chunk.js": "/UBES/static/js/453.e4e5e4ce.chunk.js",
+    "static/media/logo.png": "/UBES/static/media/logo.e8fcccde1658edba6eae.png",
+    "index.html": "/UBES/index.html",
+    "main.d944e44a.css.map": "/UBES/static/css/main.d944e44a.css.map",
+    "main.88401ce6.js.map": "/UBES/static/js/main.88401ce6.js.map",
+    "453.e4e5e4ce.chunk.js.map": "/UBES/static/js/453.e4e5e4ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d944e44a.css",
+    "static/js/main.88401ce6.js"
+  ]
+}
